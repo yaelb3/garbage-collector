@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ContainerBase, TypesEnum } from 'src/app/model';
+
+import { Component, OnInit, Input } from '@angular/core';
+import { ContainerBase, TypesEnum, GeoLocation } from 'src/app/model';
 
 @Component({
   selector: 'app-buttle-container',
@@ -7,10 +8,14 @@ import { ContainerBase, TypesEnum } from 'src/app/model';
   styleUrls: ['./buttle-container.component.scss']
 })
 export class ButtleContainerComponent implements OnInit {
+  @Input() latitude: number;
+  @Input() longitude: number;
+  @Input() capacity: number;
 
-  buttleContainer: ContainerBase;
+  public buttleContainer: ContainerBase;
   constructor() {
-    this.buttleContainer.type = TypesEnum.BOTTLE;
+    this.buttleContainer =
+    new ContainerBase(TypesEnum.PAPER, new GeoLocation(), this.capacity, '../assets/images/plastic2.jpeg');
    }
 
   ngOnInit() {
