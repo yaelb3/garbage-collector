@@ -8,7 +8,7 @@ import { SeverityEnum } from '../model';
 })
 export class ReportComponent implements OnInit {
 
-  @Input() severity: SeverityEnum;
+  @Input() severity: string;
    constructor() { }
 
   ngOnInit() {
