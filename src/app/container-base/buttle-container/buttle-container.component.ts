@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContainerBase, TypesEnum } from 'src/app/model';
 
 @Component({
   selector: 'app-buttle-container',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtleContainerComponent implements OnInit {
 
-  constructor() { }
+  buttleContainer: ContainerBase;
+  constructor() {
+    this.buttleContainer.type = TypesEnum.BOTTLE;
+   }
 
   ngOnInit() {
   }

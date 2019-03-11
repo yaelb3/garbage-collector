@@ -7,6 +7,7 @@ import { ButtleContainerComponent } from './container-base/buttle-container/butt
 import { PaperContainerComponent } from './container-base/paper-container/paper-container.component';
 import { GlassContainerComponent } from './container-base/glass-container/glass-container.component';
 import { GarbageContainerComponent } from './container-base/garbage-container/garbage-container.component';
+import { ReportComponent } from './reports/component/report.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { GarbageContainerComponent } from './container-base/garbage-container/ga
     ButtleContainerComponent,
     PaperContainerComponent,
     GlassContainerComponent,
-    GarbageContainerComponent
+    GarbageContainerComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,
