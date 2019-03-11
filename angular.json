@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "project": {
+    "garbage-collector": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/project",
+            "outputPath": "dist/garbage-collector",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "project:build"
+            "browserTarget": "garbage-collector:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "project:build:production"
+              "browserTarget": "garbage-collector:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "project:build"
+            "browserTarget": "garbage-collector:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "project-e2e": {
+    "garbage-collector-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "project:serve"
+            "devServerTarget": "garbage-collector:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "project:serve:production"
+              "devServerTarget": "garbage-collector:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "project"
+  "defaultProject": "garbage-collector"
 }
