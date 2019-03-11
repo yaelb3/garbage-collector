@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ContainerBase } from 'src/app/model';
+import { Component, OnInit, Input } from '@angular/core';
+import { TypesEnum, GeoLocation, ContainerBase } from 'src/app/model';
 
 @Component({
   selector: 'app-paper-container',
@@ -7,8 +7,16 @@ import { ContainerBase } from 'src/app/model';
   styleUrls: ['./paper-container.component.scss']
 })
 export class PaperContainerComponent implements OnInit {
-public paperContainer: ContainerBase;
-  constructor() { }
+
+  @Input() latitude: number;
+  @Input() longitude: number;
+  @Input() capacity: number;
+
+  public paperContainer: ContainerBase;
+  constructor() {
+    this.paperContainer =
+      new ContainerBase(TypesEnum.PAPER, new GeoLocation(this.latitude, this.longitude), this.capacity, '../assets/images/paper.jpeg');
+  }
 
   ngOnInit() {
   }
