@@ -3,6 +3,7 @@ import { GeoLocation } from './geo-location.model';
 
 export class ContainerBaseComponent {
     constructor(public type: TypesEnum,
-                public geoLocation: GeoLocation,
-                public capacity: number) { }
+        public geoLocation: GeoLocation,
+        public capacity: number,
+        public img: string) { }
 }
