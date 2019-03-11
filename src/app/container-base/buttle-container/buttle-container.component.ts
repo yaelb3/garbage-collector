@@ -15,7 +15,7 @@ export class ButtleContainerComponent implements OnInit {
   public buttleContainer: ContainerBase;
   constructor() {
     this.buttleContainer =
-    new ContainerBase(TypesEnum.PAPER, new GeoLocation(), this.capacity, '../assets/images/plastic2.jpeg');
+    new ContainerBase(TypesEnum.PAPER, new GeoLocation(this.latitude, this.longitude), this.capacity, '../assets/images/plastic2.jpeg');
    }
 
   ngOnInit() {
