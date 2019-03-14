@@ -1,0 +1,63 @@
+[
+    {
+        "id": "677d88ee.c99d28",
+        "type": "http in",
+        "z": "cccc87f2.7098c8",
+        "name": "",
+        "url": "/status",
+        "method": "get",
+        "username": "",
+        "password": "",
+        "authType": "noAuth",
+        "useAuth": false,
+        "useOauth": false,
+        "encryption": "none",
+        "realm": "",
+        "clientId": "",
+        "clientSecret": "",
+        "site": "",
+        "authorizationPath": "/oauth/authorize",
+        "tokenPath": "/oauth/access_token",
+        "scope": "",
+        "encryptObj": [
+            "username",
+            "password",
+            "clientId",
+            "clientSecret"
+        ],
+        "swaggerDoc": "",
+        "x": 98.59375,
+        "y": 178,
+        "wires": [
+            [
+                "6f611366.48c13c"
+            ]
+        ]
+    },
+    {
+        "id": "7b2642e1.6ea25c",
+        "type": "http response",
+        "z": "cccc87f2.7098c8",
+        "name": "",
+        "x": 502.59375,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "6f611366.48c13c",
+        "type": "function",
+        "z": "cccc87f2.7098c8",
+        "name": "",
+        "func": "msg.payload = \"SUCCESS!!!!!!!!!!!!\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "dependencies": [],
+        "x": 262.59375,
+        "y": 252,
+        "wires": [
+            [
+                "7b2642e1.6ea25c"
+            ]
+        ]
+    }
+]
